@@ -1,16 +1,16 @@
 {
-  "name": "finapi-financeira",
+  "name": "trab-node",
   "version": "1.0.0",
-  "main": "index.js",
-  "licente": "MIT",
-  "scripts": {
-    "dev": "nodemon src/index.js"
-  },
+  "main": "index.ts",
   "dependencies": {
-    "express": "^4.18.1",
-    "uuid": "^8.3.2"
+    "express": "^4.18.1"
+  },
+  "scripts": {
+    "dev": "src/index.ts"
   },
   "devDependencies": {
-    "nodemon": "^2.0.19"
+    "@types/express": "^4.17.13",
+    "prettier": "^2.7.1",
+    "typescript": "^4.7.4"
   }
 }
