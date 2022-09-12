@@ -1,9 +1,8 @@
 import { TaxaMetabolicaBasal } from "./TaxaMetabolicaBasal";
-const express = require('express');
-
+import express from 'express';
 const app = express();
-app.use(express.json());
 
+app.use(express.json());
 
 function validaDados(request, response, next) {
     const { peso, idade, sexo } = request.query;
@@ -17,7 +16,7 @@ function validaDados(request, response, next) {
         return response.status(400).json('Idade inválida ou não informado');
     }
 
-    if (sexo != 'M' || sexo != 'F') {
+    if (sexo != 'M' && sexo != 'F') {
         return response.status(400).json('Sexo inválido ou não informado.');
     }
 
@@ -25,6 +24,8 @@ function validaDados(request, response, next) {
 }
 
 const taxaMetabolicaBasal = new TaxaMetabolicaBasal();
-app.get('/calculaTaxaMetabolicaBasal', validaDados, (request, response) => taxaMetabolicaBasal.calculaTaxa(request, response));
+app.get('/calculaTaxaMetabolicaBasal', validaDados, (request, response) => {
+    taxaMetabolicaBasal.calculaTaxa(request, response);
+});
 
 app.listen(3333);
