@@ -96,3 +96,4 @@ test('(Sexo: Feminino) resultados devem ser iguais ao esperado', () => {
     resultado = 9.082 * peso + 658.5;
     expect(calc.calculaTaxa(idade, peso, 'F')).toEqual(resultado);
 });
+
