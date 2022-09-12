@@ -12,11 +12,15 @@ export class TaxaMetabolicaBasal {
             parseInt(idade),
             parseFloat(peso)
          );
-      } else {
+      } else if (sexo == 'F') {
          valorMetabolicoBasal = this.calculaTaxaFem(
             parseInt(idade),
             parseFloat(peso)
          );
+      } else {
+         return response.send({
+            details: "Sexo inválido",
+         });
       }
 
       return response.send({
