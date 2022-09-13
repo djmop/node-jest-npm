@@ -25,7 +25,7 @@ function validaDados(request, response, next) {
 
 const taxaMetabolicaBasal = new TaxaMetabolicaBasal();
 app.get('/calculaTaxaMetabolicaBasal', validaDados, (request, response) => {
-    taxaMetabolicaBasal.calculaTaxa(request, response);
+    taxaMetabolicaBasal.calculaTaxaMetabolica(request, response);
 });
 
 app.listen(3333);

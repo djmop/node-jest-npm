@@ -1,5 +1,3 @@
-// import { response } from 'express';
-// import { Response, Request } from 'express';
 import { Constants } from "./Constants";
 
 export class TaxaMetabolicaBasal {

@@ -27,9 +27,7 @@ test("Deve lançar Erro para sexo diferente de 'M' ou 'F'", () => {
 test('(Sexo: Masculino) resultados devem ser iguais ao esperado', () => {
     const calc = new TaxaMetabolicaBasal();
     const calcCst = new Constants();
-    let peso;
-    let idade;
-    let resultado;
+    let peso, idade, resultado;
 
     peso = 5;
     idade = 2;
